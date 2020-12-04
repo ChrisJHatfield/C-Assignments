@@ -1,0 +1,17 @@
+@model User
+<form asp-action="Create" asp-controller="Home" method="post">
+@* post request will get sent to a Create(User newUser) method in a HomeController class. *@
+    <span asp-validation-for="UserName"></span>
+    @* span tag will be empty if no errors and will display errors if there are errors *@
+    <label asp-for="UserName"></label>
+    @* label will pull the default value from the class: UserName unless changed with [Display] in models *@
+    <input asp-for="UserName">
+    @* input type is inferred by specifying the dataAnnotation in the models [DataType(DataType.Password)] *@
+    <span asp-validation-for="Email"></span>
+    <label asp-for="Email"></label>
+    <input asp-for="Email">
+    <span asp-validation-for="Password"></span>
+    <label asp-for="Password"></label>
+    <input asp-for="Password">
+    <input value="Add User" type="submit">
+</form>

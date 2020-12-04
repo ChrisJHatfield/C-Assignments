@@ -1,0 +1,39 @@
+* {
+    margin: 0 auto;
+}
+
+body {
+    width: 980px;
+    padding-top: 20px;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+    header h1 {
+        margin-left: 40px;
+    }
+
+    header a {
+        color: #1e5aa4;
+        margin-right: 20px;
+        font-size: 14pt;
+    }
+
+    header a:visited {
+        color: #1e5aa4;
+        margin-right: 20px;
+        font-size: 14pt;
+    }
+
+form {
+    display: flex;
+    flex-flow: column;
+    margin-top: 40px;
+    width: 50%;
+    margin-left: 0;
+}

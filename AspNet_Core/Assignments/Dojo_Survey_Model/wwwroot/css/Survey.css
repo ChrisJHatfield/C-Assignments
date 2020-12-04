@@ -1,0 +1,84 @@
+* {
+    margin: 0 auto;
+    /* border: 1px dotted black; */
+}
+
+body {
+    width: 450px;
+    margin-top: 50px;
+}
+
+#container {
+    border: 3px solid black;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-flow: column;
+}
+
+    #container h2 {
+        font-weight: lighter;
+        text-decoration: underline;
+        text-align: left;
+        width: 100%;
+    }
+
+    #container form {
+        width: 100%;
+    }
+
+        #container form p {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        #container form label {
+            width: 150px;
+            padding-top: 3px;
+        }
+
+        #container form input {
+            width: 148px;
+            height: 20px;
+            margin-right: 0;
+            border: 2px solid black;
+            border-radius: none;
+        }
+
+        #container form select {
+            width: 155px;
+            height: 27px;
+            margin-right: 0;
+            border: 2px solid black;
+        }
+
+        #comment {
+            display: flex;
+            flex-flow: column;
+        }
+
+            #comment label {
+                margin-left: 50px;
+                margin-bottom: 10px;
+            }
+            
+            #comment textarea {
+                margin-left: 50px;
+                resize: none;
+                width: 395px;
+                height: 60px;
+                margin-bottom: 10px;
+                border: 2px solid black;
+            }
+
+        button {
+            float: right;
+            font-size: 14pt;
+            background-color: #2b78e4;
+            color: white;
+            border: 1px solid black;
+            box-shadow: 1.5px 3px black;
+            height: 30px;
+            width: 100px;
+        }

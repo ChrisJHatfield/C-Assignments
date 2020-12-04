@@ -1,0 +1,21 @@
+@model DojodachiPet
+<partial name="InfoBarPartial"/>
+<div id="dojodachi">
+    <img src="#" alt="dojodachi.png">
+    <p>@Model.Message</p>
+</div>
+<div id="buttons">
+    @{
+        if(@Model.isAlive && @Model.Message != "Congratulations! Your Dojodachi is unstoppable and you have won the game!")
+        {
+            <a href="/dojodachi/feed"><button type="button">Feed</button></a>
+            <a href="/dojodachi/play"><button type="button">Play</button></a>
+            <a href="/dojodachi/work"><button type="button">Work</button></a>
+            <a href="/dojodachi/sleep"><button type="button">Sleep</button></a>
+        }
+        else
+        {
+            <a href="/dojodachi/restart"><button type="button">Restart</button></a>
+        }
+    }
+</div>

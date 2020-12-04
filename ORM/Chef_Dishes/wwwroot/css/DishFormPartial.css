@@ -1,0 +1,75 @@
+.field-validation-error {
+    background-color: rgb(251, 232, 144);
+    border: 1px solid black;
+    padding: 3px;
+}
+
+p {
+    display: flex;
+    flex-flow: column;
+}
+
+p label {
+    margin-left: 0;
+    font-size: 14pt;
+    margin: 5px;
+}
+
+p input {
+    width: 150px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    height: 25px;
+    border: 2px solid black;
+}
+
+textarea {
+    resize: none;
+    width: 220px;
+    height: 80px;
+    border: 2px solid black;
+}
+
+button {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    box-shadow: 1.5px 3px;
+    width: 100px;
+    height: 30px;
+    margin-top: 170px;
+}
+
+#details {
+    width: 30%;
+}
+
+#chef {
+    display: flex;
+    flex-flow: column;
+    width: 20%;
+    margin-right: 50px;
+}
+
+#tasty {
+    width: 40%;
+}
+
+#chef label {
+    margin-left: 0;
+    font-size: 14pt;
+    margin-bottom: 5px;
+}
+
+#chef select {
+    border: 2px solid black;
+    height: 25px;
+    width: 165px;
+}
+
+#tasty select {
+    height: 25px;
+    width: 75px;
+    margin-left: 0;
+    border: 2px solid black;
+}

@@ -1,0 +1,62 @@
+* {
+    margin: 0 auto;
+}
+
+body {
+    width: 800px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-left: 140px;
+}
+
+form {
+    margin-top: 30px;
+}
+
+p {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0;
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+label {
+    width: 120px;
+    margin-left: 0;
+}
+
+input {
+    height: 25px;
+    width: 120px;
+    border: 2px solid black;
+}
+
+button {
+    background-color: white;
+    color: black;
+    width: 80px;
+    height: 30px;
+    float: left;
+    border: 2px solid black;
+    box-shadow: 1.5px 3px;
+    position: absolute;
+    top: 340px;
+    left: 130px
+}
+
+a {
+    color: blue;
+    font-size: 14pt;
+}
+
+a:visited {
+    color: blue;
+    font-size: 14pt;
+}
+
+#link {
+    width: 91%;
+}

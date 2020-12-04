@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Index.css">
+    @model List<Dish>
+    <title>CRUDelicious</title>
+</head>
+<body>
+    <h1>Welcome to CRUDelicious</h1>
+    <div id="navbar">
+        <h3>Check out some recent dishes!</h3>
+        <a href="/new">Add a Dish</a>
+    </div>
+    <div id="dishes">
+        @foreach (Dish dish in Model)
+        {
+            <p>
+                <a href="/@dish.DishId">@dish.Name</a>
+                by
+                <span>@dish.Chef</span>
+            </p>
+        }
+    </div>
+</body>
+</html>

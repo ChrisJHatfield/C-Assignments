@@ -1,0 +1,37 @@
+.field-validation-error {
+    background-color: rgb(251, 232, 144);
+    border: 1px solid black;
+    padding: 3px;
+}
+
+p {
+    display: flex;
+    flex-flow: column;
+}
+
+p label {
+    margin-left: 0;
+    font-size: 14pt;
+    margin: 5px;
+}
+
+p input {
+    width: 200px;
+    margin-bottom: 20px;
+    height: 25px;
+    border: 2px solid black;
+}
+
+button {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    box-shadow: 1.5px 3px;
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+}
+
+#birthday {
+    width: 130px;
+}

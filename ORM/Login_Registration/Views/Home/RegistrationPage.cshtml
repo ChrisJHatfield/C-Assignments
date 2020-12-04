@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @model LogReg
+    <title>Registration</title>
+</head>
+<body>
+    <header>
+        <h1>Register to this Cool Site!</h1>
+        <a href="/login">Login</a>
+    </header>
+    <main>
+        <form asp-action="CreateUser" asp-controller="LogReg" method="post">
+            <div id="user-details">
+                <span asp-validation-for="FirstName"></span>
+                <p>
+                    <label asp-for="FirstName"></label>
+                    <input asp-for="FirstName">
+                </p>
+                <span asp-validation-for="LastName"></span>
+                <p>
+                    <label asp-for="LastName"></label>
+                    <input asp-for="LastName">
+                </p>
+                <span asp-validation-for="Email"></span>
+                <p>
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email">
+                </p>
+                <button type="submit">Sign Up Now</button>
+            </div>
+            <div id="password">
+                <span asp-validation-for="Password"></span>
+                <p>
+                    <label asp-for="Password"></label>
+                    <input asp-for="Password">
+                </p>
+                <span asp-validation-for="Confirm"></span>
+                <p>
+                    <label asp-for="Confirm"></label>
+                    <input asp-for="Confirm">
+                </p>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

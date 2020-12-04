@@ -1,0 +1,39 @@
+@model Association
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Product.css">
+    <title>Product Page</title>
+</head>
+<body>
+    <header>
+        <h1>@ViewBag.oneProduct.Name</h1>
+    </header>
+    <main>
+        <div id="categories">
+            <h2>Categories:</h2>
+            <ul>
+                @foreach (Category category in ViewBag.AllCategoriesofProduct)
+                    {
+                        <li>@category.Name</li>
+                    }
+            </ul>
+        </div>
+        <div id="form">
+            <h3>Add Category</h3>
+            <form asp-action="CategoryToProduct" asp-controller="Home" method="post">
+                <select asp-for="CategoryId">
+                    <option value="default" disabled selected hidden>Select Category</option>
+                    @foreach (Category category in ViewBag.AllCategoriesNotInProduct)
+                    {
+                        <option value="@category.CategoryId">@category.Name</option>
+                    }
+                </select>
+                <button type="submit" value="Add Category">Add</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

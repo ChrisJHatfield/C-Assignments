@@ -1,0 +1,48 @@
+* {
+    margin: 0 auto;
+}
+
+body {
+    width: 960px;
+    margin: 40px;
+    font-family:  sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    font-weight: lighter;
+    font-size: 14pt;
+    padding: 0 15px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid black;
+}
+
+
+a {
+    color: blue;
+    font-size: 14pt;
+}
+
+a:visited {
+    color: blue;
+    font-size: 14pt;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    width: 90%;
+}
+
+#dishes {
+    width: 65%;
+}
+
+#dishes p {
+    margin-bottom: 10px;
+    font-size: 14pt;
+}

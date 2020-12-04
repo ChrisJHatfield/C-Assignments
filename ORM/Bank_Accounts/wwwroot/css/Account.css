@@ -1,0 +1,94 @@
+* {
+    margin: 0 auto;
+}
+
+body {
+    width: 800px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+    header h1 {
+        margin-left: 20px;
+    }
+
+    header p {
+        padding-top: 10px;
+        font-size: 14pt;
+    }
+
+    header span {
+        border: 2px solid black;
+        padding: 5px 15px;
+        margin: 0 5px;
+    }
+
+
+form {
+    margin-top: 30px;
+}
+
+form input {
+    width: 60px;
+    height: 20px;
+    border: 2px solid black;
+    margin: 0 15px;
+}
+
+form button {
+    width: 90px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    box-shadow: 1.5px 3px;
+    margin-left: 20px;
+}
+
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: left;
+    margin-left: 0;
+    width: 78%;
+    margin-top: 30px;
+}
+
+table th {
+    background: #cccccc;
+    border-bottom: 2px solid black;
+    padding: 2px 0 0 2px;
+}
+
+table td {
+    padding: 10px 5px;
+}
+
+table th, td {
+    border-right: 2px solid black;
+    color: black;
+}
+
+table tr:nth-child(odd) {
+    background: #eee;
+}
+
+table tr:nth-child(even) {
+    background: #fff;
+}
+
+a {
+    float: right;
+    color: blue;
+    font-size: 14pt;
+}
+
+a:visited {
+    float: right;
+    color: blue;
+    font-size: 14pt;
+}

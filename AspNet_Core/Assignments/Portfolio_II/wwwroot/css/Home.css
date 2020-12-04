@@ -1,0 +1,63 @@
+* {
+    margin: 0 auto;
+}
+
+body {
+    width: 960px;
+    display: flex;
+    flex-flow: column;
+    padding: 20px;
+}
+
+#navbar a {
+    color: blue;
+    font-size: 14pt;
+    margin: 0 10px 0 10px;
+}
+
+#navbar a:visited {
+    color: blue;
+    font-size: 14pt;
+}
+
+#container {
+    display: flex;
+    flex-flow: column wrap;
+    width: 800px;
+    margin: 20px;
+}
+
+    #container h1 {
+        font-weight: lighter;
+        text-align: center;
+        padding-left: 110px;
+    }
+
+    #about-me {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+    }
+
+        #bio-pic {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            margin-right: 50px;
+        }
+
+            #bio-pic img {
+                border: 1px solid black;
+                width: 200px;
+                height: 200px;
+            }
+
+            #bio-pic p {
+                padding-top: 20px;
+                text-align: center;
+            }
+
+        #bio-body {
+            width: 65%;
+            margin-left: 100px;
+        }

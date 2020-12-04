@@ -1,0 +1,43 @@
+@model Transaction
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Account.css">
+    <title>Account</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome, @ViewBag.user.FirstName @ViewBag.user.LastName</h1>
+        <p>Current balance:<span>$@ViewBag.sum</span></p>
+    </header>
+    <form asp-action="Transact" asp-controller="Home" method="post">
+        <p>
+            <span asp-validation-for="Amount"></span>
+            <label asp-for="Amount"></label>
+            <input asp-for="Amount">
+            <input value="@ViewBag.user.UserId" hidden>
+            <button type="submit">Submit</button>
+        </p>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Amount</th><th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(Transaction amount in ViewBag.balances)
+            {
+                <tr>
+                    <td>@amount.Amount</td>
+                    <td>@amount.CreatedAt</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a asp-action="Logout" asp-controller="RegLog">Logout</a>
+</body>
+</html>

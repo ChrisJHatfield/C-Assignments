@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/MessageBoard.css">
+    <title>The Wall</title>
+</head>
+<body>
+    <nav>
+        <h2>CodingDojo Wall</h2>
+        <div id="welcome">
+            <p>Welcome @ViewBag.UserInSession.FirstName</p>
+            <a asp-action="Logout" asp-controller="LogReg">log off</a>
+        </div>
+    </nav>
+    <main>
+        <div id="message-form">
+            <form asp-action="AddMessage" asp-controller="Home" method="post">
+                <partial name="MessagePartial">
+            </form>
+        </div>
+        @foreach (Message message in ViewBag.allMessages)
+        {
+            <div id="user-message">
+                @if (@message.UserId == @ViewBag.UserInSession.UserId)
+                {
+                    <a class="delete" href="/message/delete/@message.MessageId/@message.UserId"><button type="button">Delete Message</button></a>
+                }
+                <h4>@message.User.FirstName @message.User.LastName - @message.CreatedAt.ToLongDateString() | Likes: @message.MessageLiked.Count </h4>
+                <p>@message.UserMessage</p>
+                @if (@message.MessageLiked.Any(c => c.UserId == @ViewBag.UserInSession.UserId))
+                        {
+                            <a class="like-comment" href="/unlike/message/@message.MessageId"><button type="button">UnLike</button></a>
+                        }
+                        else
+                        {
+                            <a class="like-comment" href="/like/message/@message.MessageId"><button type="button">Like</button></a>
+                        }
+                @foreach (Comment comment in message.Comments)
+                {
+                    <div id="message-comments">
+                        @if (@comment.UserId == @ViewBag.UserInSession.UserId)
+                        {
+                            <a class="delete" href="/comment/delete/@comment.CommentId/@comment.UserId"><button type="button">Delete Comment</button></a>
+                        }
+                        <h5>@comment.User.FirstName @comment.User.LastName - @comment.CreatedAt.ToLongDateString() | Likes: @comment.CommentLiked.Count </h5>
+                        <p>@comment.UserComment</p>
+                        @if (@comment.CommentLiked.Any(c => c.UserId == @ViewBag.UserInSession.UserId))
+                        {
+                            <a class="like-comment" href="/unlike/comment/@comment.CommentId"><button type="button">UnLike</button></a>
+                        }
+                        else
+                        {
+                            <a class="like-comment" href="/like/comment/@comment.CommentId"><button type="button">Like</button></a>
+                        }
+                    </div>
+                }
+                <div id="comment-form">
+                    <form asp-action="AddComment" asp-controller="Home" asp-route-MessageId="@message.MessageId" method="post">
+                        <partial name="CommentPartial"/>
+                    </form>
+                </div>
+            </div>
+        }
+    </main>
+</body>
+</html>

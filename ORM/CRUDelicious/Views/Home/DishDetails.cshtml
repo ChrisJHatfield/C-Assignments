@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/DishDetails.css">
+    @model Dish
+    <title>View Dish</title>
+</head>
+<body>
+    <a href="/">Home</a>
+    <div id="title">
+        <h1>@Model.Name</h1>
+        <h3>@Model.Chef</h3>
+    </div>
+    <div id="details">
+        <p>@Model.Description</p>
+        <p><span>Calories:</span> @Model.Calories</p>
+        <p><span>Tastiness: @Model.Tastiness</span></p>
+    </div>
+    <div id="footer">
+        <a href="/delete/@Model.DishId"><button type="button" id="delete">Delete</button></a>
+        <a href="/edit/@Model.DishId"><button type="button" id="edit">Edit</button></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+@model List<Dish>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Dishes.css">
+    <title>Dishes</title>
+</head>
+<body>
+    <header>
+        <p>
+            <a href="/" class="navbar">Chefs</a>
+            |
+            <a href="/dishes" class="navbar">Dishes</a>
+        </p>
+        <a href="/dishes/new">Add a Dish</a>
+    </header>
+    <main>
+        <h2>Yum, take a look at our tasty dishes!</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th><th>Chef</th><th>Tastiness</th><th>Calories</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Dish dish in Model)
+                {
+                    <tr>
+                        <td>@dish.Name</td>
+                        <td>@dish.Chef.FirstName @dish.Chef.LastName</td>
+                        <td>@dish.Tastiness</td>
+                        <td>@dish.Calories</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

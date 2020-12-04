@@ -1,0 +1,86 @@
+.field-validation-error {
+    background-color: rgb(246, 234, 125);
+    color: red;
+    border: 1px solid black;
+    padding: 5px;
+    width: 250px;
+    text-align: center;
+}
+
+#error {
+    height: 40px;
+    width: 175px;
+    text-align: left;
+}
+
+p {
+    margin: 5px 0;
+    display: flex;
+    flex-flow: column;
+}
+
+label {
+    margin-top: 10px;
+    margin-left: 25px;
+    text-align: left;
+}
+
+input {
+    width: 200px;
+    height: 25px;
+    border: 3px solid black;
+}
+
+select {
+    height: 35px;
+    width: 70px;
+    border: 3px solid black;
+    margin-bottom: 5px;
+}
+
+textarea {
+    height: 130px;
+    width: 200px;
+    resize: none;
+    border: 3px solid black;
+    padding: 5px;
+}
+
+button {
+    background-color: white;
+    border-radius: none;
+    border: 2px solid black;
+    box-shadow: 1.5px 3px;
+    height: 35px;
+    font-size: 14pt;
+    margin-top: 25px;
+    margin-left: 26px;
+}
+
+#calories {
+    width: 50px;
+    margin-left: 30px;
+    border: 3px solid black;
+}
+
+#details {
+    display: flex;
+    flex-flow: column;
+}
+
+#tasty {
+    display: flex;
+    flex-flow: column;
+    width: 20%;
+    margin-right: 100px;
+}
+
+#description {
+    display: flex;
+    flex-flow: column;
+}
+
+#taste-label {
+    text-align: center;
+    margin-right: 35px;
+}

@@ -1,0 +1,35 @@
+#registration .field-validation-error {
+    background-color: rgb(248, 231, 131);
+    color: red;
+    border: 1px solid black;
+    padding: 5px;
+    width: 260px;
+    text-align: center;
+}
+
+#registration p {
+    display: flex;
+    margin-top: 10px;
+}
+
+#registration label {
+    width: 100px;
+    padding-top: 5px;
+    margin-right: 10px;
+}
+
+#registration input {
+    width: 150px;
+    height: 25px;
+    border: 2px solid black;
+    margin-bottom: 15px;
+}
+
+#registration button {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    box-shadow: 1.5px 3px;
+    width: 90px;
+    height: 30px;
+}

@@ -1,0 +1,29 @@
+@model User
+<link rel="stylesheet" href="~/css/RegisterPartial.css">
+
+    <span asp-validation-for="FirstName"></span>
+<p>
+    <label asp-for="FirstName"></label>
+    <input asp-for="FirstName">
+</p>
+    <span asp-validation-for="LastName"></span>
+<p>
+    <label asp-for="LastName"></label>
+    <input asp-for="LastName">
+</p>
+    <span asp-validation-for="Email"></span>
+<p>
+    <label asp-for="Email"></label>
+    <input asp-for="Email">
+</p>
+    <span asp-validation-for="Password"></span>
+<p>
+    <label asp-for="Password"></label>
+    <input asp-for="Password">
+</p>
+    <span asp-validation-for="Confirm"></span>
+<p>
+    <label asp-for="Confirm"></label>
+    <input asp-for="Confirm">
+</p>
+<button type="submit" value="Add User">Register</button>

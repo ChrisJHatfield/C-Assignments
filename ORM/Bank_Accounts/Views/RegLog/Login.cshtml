@@ -1,0 +1,33 @@
+@model Login
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Login.css">
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <div id="form">
+        <form asp-action="UserLogin" asp-controller="RegLog" method="post">
+            <div id="left">
+                <p>
+                    <span asp-validation-for="Email"></span>
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email">
+                </p>
+                <p>
+                    <span asp-validation-for="Password"></span>
+                    <label asp-for="Password"></label>
+                    <input asp-for="Password">
+                </p>
+            </div>
+            <div id="right">
+                <a href="/">Need to Register?</a>
+            </div>
+                <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

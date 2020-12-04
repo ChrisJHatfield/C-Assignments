@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/AddChef.css">
+    <title>Add Chef</title>
+</head>
+<body>
+    <header>
+        <h2>Add a Chef!</h2>
+        <a href="/">Home</a>
+    </header>
+    <form asp-action="NewChef" asp-controller="Home" method="POST">
+        <partial name="ChefFormPartial" model="@Model" />
+    </form>
+</body>
+</html>

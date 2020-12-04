@@ -1,0 +1,36 @@
+* {
+    margin: 0 auto;
+}
+
+body {
+    width: 980px;
+    display: flex;
+    padding-top: 20px;
+    font-family: sans-serif;
+}
+
+#registration {
+    margin-top: 20px;
+    display: flex;
+    flex-flow: column;
+}
+
+#login {
+    margin-top: 20px;
+    display: flex;
+    flex-flow: column;
+}
+
+h2 {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#login h2 {
+    padding-left: 25px;
+}
+
+form {
+    display: flex;
+    flex-flow: column;
+}

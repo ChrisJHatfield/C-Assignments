@@ -1,0 +1,87 @@
+* {
+    margin: 0 auto;
+}
+
+body {
+    width: 960px;
+    display: flex;
+    flex-flow: column;
+    padding: 20px;
+}
+
+#navbar a {
+    color: blue;
+    font-size: 14pt;
+    margin: 0 10px 0 10px;
+}
+
+#navbar a:visited {
+    color: blue;
+    font-size: 14pt;
+}
+
+#container {
+    display: flex;
+    flex-flow: column wrap;
+    width: 800px;
+    margin: 20px;
+}
+
+    #container h1 {
+        font-weight: lighter;
+        text-align: center;
+        padding-left: 110px;
+        margin-bottom: 20px;
+    }
+
+    #container form {
+        width: 70%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+        #contact {
+            width: 50%;
+            height: 100px;
+            padding-top: 30px;
+        }
+
+            #contact p {
+                display: flex;
+            }
+
+                #contact label {
+                    width: 20px;
+                    margin-bottom: 10px;
+                    padding-bottom: 10px;
+                }
+
+                #contact input {
+                    width: 140px;
+                    height: 20px;
+                    margin-left: 20px;
+                }
+
+        #message {
+            width: 40%;
+            display: flex;
+            flex-flow: column wrap;
+        }
+        
+            #message input {
+                height: 55px;
+                width: 200px;
+                margin: 10px 0;
+                padding: 5px;
+            }
+
+            #message button {
+                background-color: white;
+                color: black;
+                border: 1px solid black;
+                box-shadow: 1.5px 3px;
+                width: 100px;
+                height: 30px;
+                margin-right: 12px;
+            }

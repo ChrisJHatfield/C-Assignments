@@ -1,0 +1,29 @@
+* {
+    margin: 0 auto;
+}
+
+body {
+    width: 960px;
+    display: flex;
+    flex-flow: column;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-weight: lighter;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 28pt;
+}
+
+#time {
+    width: 35%;
+    border: 3px solid black;
+    padding: 10px;
+}
+
+#time p {
+    font-size: 32pt;
+    text-align: center;
+}

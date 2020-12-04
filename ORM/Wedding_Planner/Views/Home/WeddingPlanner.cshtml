@@ -1,0 +1,52 @@
+@model Guest
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/WeddingPlanner.css">
+    <title>Wedding Planner</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Wedding Planner</h1>
+        <nav>
+            <a asp-action="Logout" asp-controller="LogReg">Log Out</a>
+        </nav>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Wedding</th><th>Date</th><th>Guests</th><th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                    @foreach (Wedding wedding in ViewBag.allWeddings)
+                    {
+                    <tr>
+                        <td><a class="guest" href="/Wedding/@wedding.WeddingId">@wedding.WedderOne & @wedding.WedderTwo</a></td>
+                        <td>@wedding.Date.ToLongDateString()</td>
+                        <td>@wedding.Guests.Count</td>
+                        @{
+                            if (@wedding.UserId == ViewBag.UserId)
+                            {
+                                <td><a class="guest" href="/Dashboard/@wedding.WeddingId/@ViewBag.UserId">Delete</a></td>
+                            }
+                            else if(@wedding.Guests.Any(u => u.UserId == ViewBag.UserId))
+                            {
+                                <td><a class="guest" href="/Dashboard/@wedding.WeddingId/Remove">Un-RSVP</a></td>
+                            }
+                            else
+                            {
+                                <td><a class="guest" href="/Dashboard/@wedding.WeddingId">RSVP</a></td>
+                            }
+                        }
+                    </tr>
+                    }
+            </tbody>
+        </table>
+        <a href="/Wedding"><button type="button">New Wedding</button></a>
+    </main>
+</body>
+</html>

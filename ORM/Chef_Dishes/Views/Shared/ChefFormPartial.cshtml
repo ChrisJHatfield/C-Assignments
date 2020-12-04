@@ -1,0 +1,23 @@
+@model Chef
+<link rel="stylesheet" href="~/css/ChefFormPartial.css">
+
+<div id="left">
+    <span asp-validation-for="FirstName"></span>
+    <p>
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName">
+    </p>
+    <span asp-validation-for="LastName"></span>
+    <p>
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName">
+    </p>
+</div>
+<div id="right">
+    <span asp-validation-for="Birthday"></span>
+    <p>
+        <label asp-for="Birthday"></label>
+        <input asp-for="Birthday" id="birthday">
+    </p>
+    <button type="submit">Add Chef</button>
+</div>

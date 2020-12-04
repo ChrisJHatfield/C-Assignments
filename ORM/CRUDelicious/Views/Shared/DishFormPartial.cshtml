@@ -1,0 +1,51 @@
+@model Dish
+<link rel="stylesheet" href="~/css/DishFormPartial.css">
+    
+<div id="details">
+        <span asp-validation-for="Chef"></span>
+    <p>
+        <label asp-for="Chef"></label>
+        <input asp-for="Chef">
+    </p>
+        <span asp-validation-for="Name"></span>
+    <p>
+        <label asp-for="Name"></label>
+        <input asp-for="Name">
+    </p>
+        <span asp-validation-for="Calories"></span>
+    <p>
+        <label asp-for="Calories"></label>
+        <input asp-for ="Calories" id="calories">
+    </p>
+</div>
+<div id="tasty">
+    <p>
+        <label asp-for="Tastiness" id="taste-label"></label>
+        <select asp-for="Tastiness">
+            <option value="default" disabled selected hidden>Rating</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </p>
+        <span asp-validation-for="Tastiness" id="error"></span>
+</div>
+<div id="description">
+        <span asp-validation-for="Description"></span>
+    <p>
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description"></textarea>
+    </p>
+    @{
+        if (@Model != null)
+        {
+            <button type="submit">Edit Dish</button>
+        }
+        else
+        {
+            <button type="submit">Add Dish</button>
+        }
+    }
+</div>

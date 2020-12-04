@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Projects.css">
+    <title>Projects</title>
+</head>
+<body>
+    <div id="navbar">
+        <a href="/">Home</a>
+        |
+        <a href="/projects">Projects</a>
+        |
+        <a href="/contact">Contact</a>
+    </div>
+    <div id="container">
+        <h1>Here are some projects of mine!</h1>
+        <div id="projects">
+            @{
+                string[] project1 = new string[]{
+                    "image1.jpg",
+                    "Project_Name1",
+                    "Project_Description1"
+                };
+                string[] project2 = new string[]{
+                    "image2.jpg",
+                    "Project_Name2",
+                    "Project_Description2"
+                };
+                string[] project3 = new string[]{
+                    "image3.jpg",
+                    "Project_Name3",
+                    "Project_Description3"
+                };
+                List<string[]> projects = new List<string[]>{};
+                    projects.Add(project1);
+                    projects.Add(project2);
+                    projects.Add(project3);
+                foreach(string[] item in projects)
+                {
+                    <div id="project">
+                        <img src="@item[0]" alt="@item[0]">
+                        <div>
+                            <h3>@item[1]</h3>
+                            <p>@item[2]</p>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</body>
+</html>

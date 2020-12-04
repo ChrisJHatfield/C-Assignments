@@ -1,0 +1,7 @@
+@model Message
+<link rel="stylesheet" href="~/css/MessagePartial.css">
+
+<span asp-validation-for="UserMessage"></span>
+<label asp-for="UserMessage"></label>
+<input asp-for="UserMessage">
+<button type="submit" value="Add Message">Post a message</button>

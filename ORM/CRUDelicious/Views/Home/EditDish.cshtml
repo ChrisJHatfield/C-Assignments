@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/EditDish.css">
+    @model Dish
+    <title>Edit Dish</title>
+</head>
+<body>
+    <a href="/">Home</a>
+    <h1>@Model.Name</h1>
+    <form action="/update/@Model.DishId" method="POST">
+        <partial name="DishFormPartial" model="@Model"/>
+    </form>
+</body>
+</html>

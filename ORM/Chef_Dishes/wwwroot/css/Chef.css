@@ -1,0 +1,82 @@
+* {
+    margin: 0 auto;
+}
+
+body {
+    width: 800px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+    header p {
+        width: 50%;
+        text-align: center;
+        font-size: 24pt;
+        font-weight: bold;
+        padding-left: 30px;
+    }
+
+    .navbar {
+        color: blue;
+        font-size: 20pt;
+        margin: 5px;
+        font-weight: none;
+    }
+
+    .navbar a:visited {
+        color: blue;
+        font-size: 20pt;
+        font-weight: none;
+    }
+
+    header a {
+        color: blue;
+    }
+
+    header a:visited {
+        color: blue;
+        font-size: 16pt;
+    }
+
+main h2 {
+    margin-bottom: 20px;
+    margin-left: 30px;
+    border-bottom: 3px solid black;
+    width: 50%;
+    padding: 20px;
+}
+
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: left;
+    margin-left: 10px;
+    width: 68%;
+}
+
+table th {
+    background: #cccccc;
+    border-bottom: 2px solid black;
+    padding: 2px 0 0 2px;
+}
+
+table td {
+    padding: 10px 5px;
+}
+
+table th, td {
+    border-right: 2px solid black;
+    color: black;
+}
+
+table tr:nth-child(odd) {
+    background: #eee;
+}
+
+table tr:nth-child(even) {
+    background: #fff;
+}

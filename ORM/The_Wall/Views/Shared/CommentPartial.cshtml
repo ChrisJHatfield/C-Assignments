@@ -1,0 +1,7 @@
+@model Comment
+<link rel="stylesheet" href="~/css/CommentPartial.css">
+
+<span asp-validation-for="UserComment"></span>
+<label asp-for="UserComment"></label>
+<input asp-for="UserComment">
+<button type="submit" value="Add Comment">Post a comment</button>

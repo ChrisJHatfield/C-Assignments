@@ -1,0 +1,49 @@
+@model Product
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/AddProduct.css">
+    <title>Add New Product</title>
+</head>
+<body>
+    <header>
+        <p>
+            <a href="/products">Products</a>
+            |
+            <a href="/categories">Categories</a>
+        </p>
+    </header>
+    <main>
+        <div id="form">
+            <h2>New Product</h2>
+            <form asp-action="NewProduct" asp-controller="Home" method="post">
+                <span asp-validation-for="Name"></span>
+                <p>
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name">
+                </p>
+                <span asp-validation-for="Description"></span>
+                <p>
+                    <label asp-for="Description"></label>
+                    <input asp-for="Description">
+                </p>
+                <span asp-validation-for="Price"></span>
+                <p>
+                    <label asp-for="Price"></label>
+                    <input asp-for="Price">
+                </p>
+                <button type="submit">Create</button>
+            </form>
+        </div>
+        <div id="products">
+            <h2>Existing Products</h2>
+            @foreach (Product product in ViewBag.AllProducts)
+            {
+                <a href="/products/@product.ProductId">@product.Name</a>
+            }
+        </div
+    </main>
+</body>
+</html>

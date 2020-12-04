@@ -1,0 +1,19 @@
+@model List<Chef>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/AddDish.css">
+    <title>Add Dish</title>
+</head>
+<body>
+    <header>
+        <h2>Add a Dish!</h2>
+        <a href="/dishes">Home</a>
+    </header>
+    <form asp-action="NewDish" asp-controller="Home" method="POST">
+        <partial name="DishFormPartial" model="@Model"/>
+    </form>
+</body>
+</html>

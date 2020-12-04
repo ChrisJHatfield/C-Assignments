@@ -1,0 +1,33 @@
+#comment-form .field-validation-error {
+    background-color: rgb(248, 231, 131);
+    color: red;
+    border: 1px solid black;
+    padding: 5px;
+    width: 245px;
+    text-align: center;
+}
+
+#comment-form label {
+    width: 100%;
+    margin-left: 0;
+    font-weight: bold;
+}
+
+#comment-form input {
+    height: 40px;
+    width: 100%;
+    margin-top: 5px;
+    margin-right: 10px;
+    border: 2px solid black;
+    padding: 3px 5px;
+    margin-left: 10px;
+}
+
+#comment-form button {
+    background-color: #009e0f;
+    color: white;
+    border: 2px solid #08570f;
+    box-shadow: 1.5px 3px black;
+    margin-top: 15px;
+    margin-right: -25px;
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @using ViewModel_Fun.Models
+    <title>Numbers Tab</title>
+</head>
+<body>
+    @model int[]
+    <p>Here are some numbers!</p>
+    @foreach(int number in Model)
+    {
+        <p>@number</p>
+    }
+</body>
+</html>

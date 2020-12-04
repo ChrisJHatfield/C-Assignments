@@ -1,0 +1,14 @@
+@model Login
+<link rel="stylesheet" href="~/css/LoginPartial.css">
+
+    <span asp-validation-for="UserEmail"></span>
+    <span asp-validation-for="UserPassword"></span>
+<p>
+    <label asp-for="UserEmail"></label>
+    <input asp-for="UserEmail">
+</p>
+<p>
+    <label asp-for="UserPassword"></label>
+    <input asp-for="UserPassword">
+</p>
+<button type="submit" value="Login User">Log In</button>

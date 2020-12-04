@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Survey.css">
+    @model Survey
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <div id="container">
+        <form action="result" method="POST">
+                <p><span asp-validation-for="Name"></span></p>
+            <p>
+                <label asp-for="Name"></label>
+                <input asp-for="Name"/>
+            </p>
+                <p><span asp-validation-for="Location"></span></p>
+            <p>
+                <label asp-for="Location"></label>
+                <select asp-for="Location">
+                    <option value="default" disabled selected hidden>- Choose A Location -</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="Burbank">Burbank</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Boise">Boise</option>
+                    <option value="Orange County">Orange County</option>
+                </select>
+            </p>
+                <p><span asp-validation-for="Language"></span></p>
+            <p>
+                <label asp-for="Language"></label>
+                <select asp-for="Language">
+                    <option value="default" disabled selected hidden>- Choose A Language -</option>
+                    <option value="C#">C#</option>
+                    <option value="C++">C++</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                </select>
+            </p>
+            <div id="comment">
+                <p><span asp-validation-for="Comment"></span></p>
+                <label asp-for="Comment"></label>
+                <textarea asp-for="Comment"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
